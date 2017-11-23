@@ -3,23 +3,36 @@
 <head>
     <title>ProjectX</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app-styling.css" rel="stylesheet">
     <!-- responsive  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="container">
-        <div class="search">
-            <div class="input-group col-lg-6">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
-                </span>
+        <h2></h2>
+        <div class="form-group">
+            <div class="input-group col-sm-12">
+                <input type="text" id="searchBooks" class="form-control" placeholder="Search for...">
             </div>
             <!-- /input-group -->
         </div>
         <!-- /.col-lg-6 -->
-        <div id="inventory"></div>
+        <div id="inventory">
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="totalResultsMessage"></div>
     </div>
 
     <div id="buyBook" class="modal fade" role="dialog">
@@ -34,18 +47,22 @@
                 <div class="modal-body">
                     <div class="form-group buyBookAuthor">
                         <label>Author</label>
+                        <p></p>
                     </div>
 
                     <div class="form-group buyBookTitle">
                         <label>Title</label>
+                        <p></p>
                     </div>
 
                     <div class="form-group buyBookPrice">
                         <label>Price</label>
+                        <p></p>
                     </div>
 
                     <div class="form-group buyBookID">
                         <label>ID</label>
+                        <p></p>
                     </div>
                 </div>
                 <div class="modal-footer">

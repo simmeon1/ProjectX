@@ -1,6 +1,6 @@
 var inventory = [
-	{ "Author":"Author1", "Title":"BookTitle1", "Price":55, "ID":"1234" },
-	{ "Author":"Author2", "Title":"BookTitle2", "Price":78, "ID":"5678" }
+	{ "Author":"Andrew Northedge", "Title":" The Good Study Guide (New Ed)", "Price":10.00, "ID":"2253x" },
+	{ "Author":"Anne Sigismund Huff", "Title":"Writing for Scholarly Publication", "Price":5.00, "ID":"2937x" }
 ];
 var inventoryJSON = JSON.stringify(inventory);
 //window.location = "demo_json.php?x=" + myJSON;
