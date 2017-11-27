@@ -3,15 +3,80 @@
 <head>
     <title>ProjectX</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/app-styling.css" rel="stylesheet">
     <!-- responsive  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="container">
-        <a class="btn btn-default" href="./Buy.html" role="button">Buy A Book</a>
-        <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#sellBook">Sell A Book</a>
+        <h2></h2>
+        <div class="form-group col-sm-12">
+            <a class="btn btn-default col-sm-5 load-inventory" role="button">Buy A Book</a>
+            <a class="btn btn-default col-sm-offset-2 col-sm-5" href="#" role="button" data-toggle="modal" data-target="#sellBook">Sell A Book</a>
+        </div>
+        <div class="buy-subpage">
+            <div class="form-group">
+                <div class="input-group col-sm-12">
+                    <input type="text" id="searchBooks" class="form-control" placeholder="Search for...">
+                </div>
+            </div>
+            <div id="inventory">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Author</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="totalResultsMessage"></div>
+        </div>     
+        <div id="actionMessage" style="clear:both"></div>
+    </div>
+
+    <div id="buyBook" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Buy A Book</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group buyBookAuthor">
+                        <label>Author</label>
+                        <p></p>
+                    </div>
+
+                    <div class="form-group buyBookTitle">
+                        <label>Title</label>
+                        <p></p>
+                    </div>
+
+                    <div class="form-group buyBookPrice">
+                        <label>Price</label>
+                        <p></p>
+                    </div>
+
+                    <div class="form-group buyBookID">
+                        <label>ID</label>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="buyAmazon btn btn-default" data-dismiss="modal">Find on Amazon</button>
+                    <button type="button" class="buySuccess btn btn-default" data-dismiss="modal">Buy (success)</button>
+                    <button type="button" class="buyFailure btn btn-default" data-dismiss="modal">Buy (failure)</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="sellBook" class="modal fade" role="dialog">
@@ -25,23 +90,27 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
+                        <label>RGU Email</label>
+                        <input class="form-control rguEmail">
+                    </div>
+                    <div class="form-group">
                         <label>Author</label>
-                        <input class="form-control">
+                        <input class="form-control sellBookAuthor">
                     </div>
 
                     <div class="form-group">
                         <label>Title</label>
-                        <input class="form-control">
+                        <input class="form-control sellBookTitle">
                     </div>
 
                     <div class="form-group">
                         <label>Price</label>
-                        <input class="form-control">
+                        <input class="form-control sellBookPrice">
                     </div>
 
                     <div class="form-group">
                         <label>ID</label>
-                        <input class="form-control">
+                        <input class="form-control sellBookID">
                     </div>
                 </div>
                 <div class="modal-footer">
