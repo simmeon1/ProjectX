@@ -10,13 +10,13 @@
 <body>
     <div class="container">
         <h2></h2>
-        <div class="form-group col-sm-12">
-            <a class="btn btn-default col-sm-5 load-inventory" role="button">Buy A Book</a>
-            <a class="btn btn-default col-sm-offset-2 col-sm-5" href="#" role="button" data-toggle="modal" data-target="#sellBook">Sell A Book</a>
+        <div class="form-group col-xs-12">
+            <a class="btn btn-default col-xs-5 load-inventory" role="button">Buy A Book</a>
+            <a class="btn btn-default col-xs-offset-2 col-xs-5" href="#" role="button" data-toggle="modal" data-target="#sellBook">Sell A Book</a>
         </div>
         <div class="buy-subpage">
             <div class="form-group">
-                <div class="input-group col-sm-12">
+                <div class="input-group col-xs-12">
                     <input type="text" id="searchBooks" class="form-control" placeholder="Search for...">
                 </div>
             </div>
@@ -39,7 +39,7 @@
         <div id="actionMessage" style="clear:both"></div>
     </div>
 
-    <div id="buyBook" class="modal fade" role="dialog">
+    <div id="buyBook" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -69,17 +69,17 @@
                         <p></p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="buyAmazon btn btn-default" data-dismiss="modal">Find on Amazon</button>
-                    <button type="button" class="buySuccess btn btn-default" data-dismiss="modal">Buy (success)</button>
-                    <button type="button" class="buyFailure btn btn-default" data-dismiss="modal">Buy (failure)</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="modal-footer" style="clear:both">
+                    <button type="button" class="buyAmazon btn btn-default btn-block">Find on Amazon</button>
+                    <button type="button" class="buySuccess btn btn-default btn-block" data-dismiss="modal">Buy (success)</button>
+                    <button type="button" class="buyFailure btn btn-default btn-block" data-dismiss="modal">Buy (failure)</button>
+                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="sellBook" class="modal fade" role="dialog">
+    <div id="sellBook" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->

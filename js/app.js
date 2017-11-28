@@ -14,7 +14,7 @@
 	});
 
 
-	$(".open-buyBook").click(function () {
+	$('.buy-subpage').on('click','.open-buyBook',function() {
 		var bookId = $(this).data('id');
 		$('.buyBookAuthor > p').text(inventory[bookId]["Author"]);
 		$('.buyBookTitle > p').text(inventory[bookId]["Title"]);
@@ -23,6 +23,9 @@
 	});
 
 	$(".load-inventory").click(function () {
+		$.each(inventory, function (i, val) {
+			$('[data-id=' + i +']').show();
+		});		
 		$(".buy-subpage").show();
 		$('#totalResultsMessage').text($('.result:visible').length + ' results found.');
 	});
@@ -42,13 +45,13 @@
 	});
 
 	$(".sellSuccess").click(function() {
-		var	bookPrice = parseInt($('.sellBookPrice').val()) || 0;
+		var	bookPrice = parseFloat($('.sellBookPrice').val()) || 0;
 		if (!($('.rguEmail').val().includes('@rgu.ac.uk'))) {
 			$( "#actionMessage" ).empty();
 			$( "#actionMessage" ).append('<div class="alert alert-danger"><strong>Error!</strong> RGU email was not valid.</div>');
 		}
 		else if (bookPrice != 0) {
-			inventory.push({ "Author": $('.sellBookAuthor').val(), "Title": $('.sellBookTitle').val(), "Price": parseInt($('.sellBookPrice').val()) || 0, "ID": $('.sellBookID').val() });
+			inventory.push({ "Author": $('.sellBookAuthor').val(), "Title": $('.sellBookTitle').val(), "Price": parseFloat($('.sellBookPrice').val()) || 0, "ID": $('.sellBookID').val() });
 			$( "#inventory > .table > tbody" ).append(
 				'<tr a role="button" data-toggle="modal" data-id="' + (inventory.length-1) +'" class="result open-buyBook" href="#buyBook"><td> <p>' 
 				+ inventory[inventory.length-1]["Author"] + "</p></a></td><td>" 
