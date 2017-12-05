@@ -9,12 +9,14 @@
 
 <body>
     <div class="container">
-        <h2></h2>
-        <div class="form-group col-xs-12">
-            <a class="btn btn-default col-xs-5 load-inventory" role="button">Buy A Book</a>
-            <a class="btn btn-default col-xs-offset-2 col-xs-5" href="#" role="button" data-toggle="modal" data-target="#sellBook">Sell A Book</a>
+        <div id="logoContainer">
+            <a href="index.html"><img class="col-xs-8 col-xs-offset-2" src="img/keedo.PNG"></a>
+        </div>     
+        <div class="form-group col-xs-12" style="padding:0">
+            <button class="btn btn-default col-xs-5 load-inventory">Buy A Book</button>
+            <button class="btn btn-default col-xs-5 col-xs-offset-2" data-toggle="modal" data-target="#sellBook">Sell A Book</button>
         </div>
-        <div class="buy-subpage">
+        <div class="buy-subpage" style="display:none">
             <div class="form-group">
                 <div class="input-group col-xs-12">
                     <input type="text" id="searchBooks" class="form-control" placeholder="Search for...">
@@ -91,7 +93,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>RGU Email</label>
-                        <input class="form-control rguEmail">
+                        <input class="form-control rguEmail" placeholder="Email needs to contain @rgu.ac.uk...">
                     </div>
                     <div class="form-group">
                         <label>Author</label>
@@ -105,7 +107,7 @@
 
                     <div class="form-group">
                         <label>Price</label>
-                        <input class="form-control sellBookPrice">
+                        <input class="form-control sellBookPrice" placeholder="Enter a number/decimal with no signs in front...">
                     </div>
 
                     <div class="form-group">
